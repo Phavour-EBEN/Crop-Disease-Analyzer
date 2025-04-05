@@ -77,3 +77,5 @@ def predict_disease():
 if __name__ == '__main__':
     # For development only - use proper WSGI server in production
     app.run(debug=True, host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))
+    
+    
