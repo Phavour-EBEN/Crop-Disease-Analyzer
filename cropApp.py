@@ -17,6 +17,7 @@ model = AutoModelForImageClassification.from_pretrained(MODEL_ID)
 
 @app.route('/predict', methods=['POST'])
 def predict_disease():
+    
     """
     Endpoint for crop leaf disease classification
     
