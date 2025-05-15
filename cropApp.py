@@ -2,12 +2,15 @@ from flask import Flask, request, jsonify
 import torch
 from transformers import AutoImageProcessor, AutoModelForImageClassification
 from PIL import Image
+from flask_cors import CORS
 import io
 import base64
 import os
 
 app = Flask(__name__)
 
+# Enable CORS for all routes
+CORS(app, resources={r"/*": {"origins": "*"}})
 # Load model and processor only once at startup
 MODEL_ID = "wambugu71/crop_leaf_diseases_vit"
 
